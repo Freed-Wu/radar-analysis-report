@@ -1,0 +1,58 @@
+\documentclass{njustthesis}
+\setCJKfamilyfont{simfang}{simfang}
+\njustsetup{%
+  author = 吴振宇,
+  id = 916101630117,
+  discipline = 电子信息工程,
+  title = 雷达信号处理与分析,
+  title* = {},
+  cover-title = 实验报告,
+  header-title = 实验报告,
+  subtitle = {许卓然 9171010E0303 陆相钺 9171010G0925},
+  supervisor = 张文青,
+  supervisor-title = 教授,
+  judge = {},
+  signature = \includegraphics{signature},
+  judge-title = 教授,
+}
+\usepackage[refpage]{nomencl}
+\makenomenclature%
+\renewcommand{\nomname}{术语}
+\renewcommand{\pagedeclaration}{，第1次出现在页~}
+\usepackage{minted}
+\setminted{%
+  breakanywhere,
+  breakanywheresymbolpre = {},
+  breaksymbolleft = {},
+  breaksymbolindentleftnchars = 0,
+}
+\usepackage{boxie}
+\usepackage{siunitx}
+\sisetup{mode = text}
+\usepackage{cases}
+\usepackage{csvsimple}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\newtheorem{definition}{定义}
+\newtheorem{theorem}{定理}
+\numberwithin{Exercise}{chapter}
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+\listofexercises%
+\printnomenclature%
+
+\mainmatter%
+
+\subfile{subfiles/iq.tex}
+\subfile{subfiles/mf.tex}
+\subfile{subfiles/mtd.tex}
+
+\end{document}
+
