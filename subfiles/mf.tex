@@ -20,6 +20,14 @@
   \end{itemize}
 \end{Answer}
 
+\begin{table}[htbp]
+  \centering
+  \caption{匹配滤波器}%
+  \label{tab:mf}
+  \small
+  \csvautobooktabular[respect percent]{tables/mf.csv}
+\end{table}
+
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[htbp]{0.45\linewidth}
@@ -90,7 +98,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -99,7 +107,7 @@
     \label{fig:rect_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -108,7 +116,7 @@
     \label{fig:rect-out_}
   \end{subfigure}
 
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -117,7 +125,7 @@
     \label{fig:mrect_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -126,25 +134,25 @@
     \label{fig:mrect-out_}
   \end{subfigure}
 
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
     ]{figures/m.pdf}
-    \caption{M 序列}%
+    \caption{M 序列（ 10 周期）}%
     \label{fig:m_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
     ]{figures/m-out.pdf}
-    \caption{M 序列匹配滤波输出波形}%
+    \caption{M 序列匹配滤波输出波形（中间 5 个脉冲）}%
     \label{fig:m-out_}
   \end{subfigure}
 
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -153,7 +161,7 @@
     \label{fig:pn_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -162,7 +170,7 @@
     \label{fig:pn-out_}
   \end{subfigure}
 
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -171,7 +179,7 @@
     \label{fig:barker13_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -180,7 +188,7 @@
     \label{fig:barker13-out_}
   \end{subfigure}
 
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -189,7 +197,7 @@
     \label{fig:barker4_7_}
   \end{subfigure}
   \quad
-  \begin{subfigure}[htbp]{0.25\linewidth}
+  \begin{subfigure}[htbp]{0.23\linewidth}
     \centering
     \includegraphics[
       width = \linewidth,
@@ -200,13 +208,6 @@
   \caption{输入波形和匹配滤波输出波形}%
   \label{fig:mf_}
 \end{figure}
-
-\begin{table}[htbp]
-  \centering
-  \caption{匹配滤波器}%
-  \label{tab:mf}
-  \csvautobooktabular[respect percent]{tables/mf.csv}
-\end{table}
 
 \langCVfile[matlab][lst:mf][matlab]{figures/mf.m}{figures/mf.m}
 
@@ -244,7 +245,7 @@
 \end{Exercise}
 
 \begin{Answer}
-  因为该系统采用数字信号处理代替脉冲匹配滤波器。
+  因为该数字信号处理系统没有子脉冲匹配滤波器。
 \end{Answer}
 
 \begin{Exercise}
