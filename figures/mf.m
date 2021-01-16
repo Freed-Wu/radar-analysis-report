@@ -1,10 +1,11 @@
 s_rect = [1];
 s_mrect = [1 0 1 0 1];
 L = 5;
-% m_sequence comes from <https://github.com/askuric/m_sequences_tools>
-s_pn = m_sequence(2, L);
+% need <https://github.com/askuric/m_sequences_tools>
+m = m_sequence(2, L);
 % uncomment it if you don't have the aforementioned package
-% s_pn = [0 1 1 1 0 0 0 1 0 1 0 1 1 0 1 0 0 0 0 1 1 0 0 1 0 0 1 1 1 1 1];
+% m = [0 1 1 1 0 0 0 1 0 1 0 1 1 0 1 0 0 0 0 1 1 0 0 1 0 0 1 1 1 1 1];
+s_pn = (-1).^m;
 % the period number of m sequence
 N = 10;
 s_m = repmat(s_pn, 1, N);
@@ -13,7 +14,7 @@ M = 2^L - 1;
 l = 2;
 sample = M*(N - l):M*(N + l);
 s_barker13 = [1 1 1 1 1 -1 -1 1 1 -1 1 -1 1];
-% note: 4 digit barker code is not only
+% note: 4 digit barker code is not only one
 % s_barker4 = [1 1 1 -1];
 s_barker4 = [1 1 -1 1];
 s_barker7 = [1 1 1 -1 -1 1 -1];
